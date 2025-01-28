@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.index {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.nav-item {
+    display: flex;
+    gap: 1.2rem;
+}
+.signup-login{
+    display: flex;
+    gap: 1rem;
+}

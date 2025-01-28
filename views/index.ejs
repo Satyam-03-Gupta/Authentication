@@ -6,11 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="w-full h-screen bg-zinc-900"></div>
-    <p>hello</p>
+    <header class="w-full h-screen bg-zinc-900 text-white">
+        <div class="index">
+            <div class="navicon" onclick="window.location.href='/'">
+                <span class="sitename">LOGIN <span class="s" style="color: #e32319;">PAGE</span></span>
+            </div>
+
+            <div class="nav-item">
+                <span class="menu">MENU</span>
+                <a href=""><span class="hamburger-nav"><i class='fa fa-home'></i></span>HOME</a>
+                <a href=""><span class="hamburger-nav"><i class='fas fa-user-friends'></i></span>ABOUT US</a>
+                <a href=""><span class="hamburger-nav"><i class='fas fa-phone-volume'></i></span>CONTACT
+                    US</a>
+                <a href=""><span class="hamburger-nav"><i class='fas fa-user-lock'></i></span>PRIVACY
+                    POLICY</a>
+            </div>
+            <div class="signup-login">
+                <button class="login" onclick="window.location.href='/login'">Login</button>
+
+                <button class="signup" onclick="window.location.href='/createuser'">Signup</button>
+            </div>
+        </div>
+    </header>
 </body>
 
 </html>

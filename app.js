@@ -20,6 +20,7 @@ app.get('/createuser', (req, res) => {
     res.render('createuser');
 });
 
+
 app.post('/create', async (req, res) => {
     let { username, email, password, age } = req.body;
 

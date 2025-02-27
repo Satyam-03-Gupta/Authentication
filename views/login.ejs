@@ -16,7 +16,9 @@
             <form action="/login" method="post">
                 <input class="" type="text" name="email" placeholder="email">
                 <input class="" type="text" name="password" placeholder="password">
-                <input class="sucessful" type="submit" value="login "></input>
+
+                <input class="sucessful" type="submit" value="login" onclick="checkLoginStatus()"></input>
+
                 <p>Not a member? <a href="/createuser">Signup now</a></p>
             </form>
 
@@ -26,9 +28,8 @@
         </div>
     </div>
 
-
+    <script src="app.js"></script>
 
 </body>
 
 </html>
-

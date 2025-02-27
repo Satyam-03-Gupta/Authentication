@@ -7,6 +7,8 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -25,13 +27,34 @@
                 <a href=""><span class="hamburger-nav"><i class='fas fa-user-lock'></i></span>PRIVACY
                     POLICY</a>
             </div>
-            <div class="signup-login">
-                <button class="login" onclick="window.location.href='/login'">Login</button>
 
-                <button class="signup" onclick="window.location.href='/createuser'">Signup</button>
-            </div>
+            <main>
+                <% if (user) { %>
+                    <img src="/photo/user-circle-solid.jpg " class="profile-img" alt="Profile Picture"
+                        onclick="ProfileIcon()">
+                    <section class="profile-info">
+                        <h2>Welcome, <%= user.username %>!</h2>
+                        <p>
+                            <%= user.email %>
+                        </p>
+                        <form action="/logout" method="post">
+                            <button type="submit">Logout</button>
+                        </form>
+                    </section>
+                    <% } else { %>
+                        <a href="/login">Login here</a>
+                        <% } %>
+            </main>
+
         </div>
+
     </header>
+    <script>
+        function ProfileIcon() {
+            const profileimg = document.querySelector('.profile-info');
+            profileimg.classList.toggle('active');
+        }</script>
+    <script src="app.js"></script>
 </body>
 
 </html>

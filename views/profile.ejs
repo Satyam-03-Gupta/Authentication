@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Your Profile Dashboard</h1>
+    </header>
+    <main>
+        <section class="profile-info">
+            <h2>Profile Information</h2>
+            <p><strong>Name:</strong>
+                <%= user.name %>
+            </p>
+            <p><strong>Email:</strong>
+                <%= user.email %>
+            </p>
+        </section>
+        <section class="account-settings">
+            <h2>Account Settings</h2>
+            <a href="/settings">Edit Profile</a>
+            <a href="/logout">Logout</a>
+        </section>
+    </main>
+</body>
+
+</html>
+</section>
+
+</html>
